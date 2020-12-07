@@ -1,0 +1,24 @@
+class PracticalFinal{
+    public String reverseWords(String s) {
+        String[] words = s.trim().split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        for(int i = words.length - 1; i >= 0; i--) {
+            sb.append(words[i]).append(" ");
+        }
+        return sb.toString().trim();
+}
+    public void usingStringBuilder() {
+        StringBuilder stringBuilder = new StringBuilder(150);
+        stringBuilder.append("Java");
+        stringBuilder.append(" is");
+        stringBuilder.append(" top");
+        stringBuilder.append(" programming");
+        stringBuilder.append(" laguange");
+        System.out.println(stringBuilder.toString());
+    }
+ public static void main(String[] args) {
+        PracticalFinal example = new ConcatStringExample();
+        example.usingStringBuilder();
+        System.out.println(“Hero , Reverse : ”,example.reverseWords(“Hero”) );
+    }
+}
